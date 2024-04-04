@@ -1,8 +1,11 @@
+@import 'assets/styles/tailwind.css';
+@import 'assets/styles/fonts.css';
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Nunito, sans-serif;
 }
