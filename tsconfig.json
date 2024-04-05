@@ -2,6 +2,15 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./src",
+    "paths": {
+      "@pages": ["./pages/index.ts"],
+      "@components": ["./components/index.ts"],
+      "@common": ["./components/common/index.ts"],
+      "@slices": ["./slices/index.ts"],
+      "@routes": ["./routes/index.ts"],
+      "@types": ["./types/index.ts"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

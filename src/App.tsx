@@ -1,11 +1,10 @@
 import React from 'react'
+import { RoutesList } from '@routes'
 
-const App = () => {
-  return (
-    <div className="App">
-      <p>placeholder</p>
-    </div>
-  )
-}
+const App = () => (
+  <div className="App">
+    <RoutesList />
+  </div>
+)
 
 export default App
