@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, memo } from 'react'
 import { Post } from '@types'
 import { LinkEl } from '@common'
 
@@ -6,12 +6,12 @@ interface Props {
   post: Post
 }
 
-export const PostCard: FC<Props> = ({ post }) => (
+const PostCard: FC<Props> = ({ post }) => (
   <li className="bg-primary-light rounded-md overflow-hidden shadow-xl duration-300 hover:scale-105">
     {/*Post image*/}
     <img
       className="w-full h-40"
-      src={require('../assets/images/mock-image.webp')}
+      src={require('../../assets/images/mock-image.webp')}
       alt="post-image"
     />
 
@@ -31,3 +31,5 @@ export const PostCard: FC<Props> = ({ post }) => (
     </div>
   </li>
 )
+
+export default memo(PostCard)

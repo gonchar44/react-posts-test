@@ -1,11 +1,4 @@
-import React, { Suspense } from 'react'
-import { PageLoader } from '@common'
+import React from 'react'
 import { PostsList } from '@components'
 
-export const BlogPage = () => (
-  <>
-    <Suspense fallback={<PageLoader />}>
-      <PostsList />
-    </Suspense>
-  </>
-)
+export const BlogPage = () => <PostsList />
