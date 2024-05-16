@@ -1,12 +1,12 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import { useGetPostsQuery } from '@slices'
-
-const PostCard = lazy(async () => ({
-  default: (await import('@components')).PostCard
-}))
+import { PageLoader } from '@common'
+import { PostCard } from '@components'
 
 export const PostsList = () => {
-  const { data: posts } = useGetPostsQuery({ limit: 100 })
+  const { data: posts, isLoading } = useGetPostsQuery({ limit: 100 })
+
+  if (isLoading) return <PageLoader />
 
   return (
     <section className="max-w-screen-xl w-full mx-auto p-5">
